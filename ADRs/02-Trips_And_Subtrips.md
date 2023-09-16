@@ -1,6 +1,6 @@
 ## Question: What is a subtrip?
 
-A substrip is collection of well defined items which together constitute a trip. This collection can include items like cities to visit under a trip. All these items will be linear with respect to the time. Asumming that a planner can be at one place at one particular time the subtrip items have unqiue date and time and togther constitute the complete duration of the "trip". The subtrips can further include their own reservations of flights, cab, tourist places, and so on.
+A substrip is collection of high level trips which the user wants to do as a part of the trip. This collection can include items like cities to visit under a trip. All these items will be linear with respect to the time. Asumming that a planner can be at one place at one particular time the subtrip items have unqiue date and time and togther constitute the complete duration of the "trip". The subtrips can further include their own reservations of flights, cab, tourist places, and so on.
 
 For instance:
 We have a trip say Europe trip from 1st Sept to 20th Sept.
@@ -18,3 +18,5 @@ For instance, Greece trip can further be a collection of subtrips where each sub
 3. Mykonos = 9th Sept to 10th Sept
 
 This provides the planner to make a trip as particular as he wants.
+
+Since this is an N-level hierarchy, the root trip will have it's `Parent_Trip_ID` set as `NULL` and all subtrips of any parent trip will have their `Parent_Trip_ID` set as the trip ID of the parent trip.
